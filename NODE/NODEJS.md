@@ -29,3 +29,15 @@ What is a Node.js File?
 ### MODULES,REQUIRE,EXPORTS
 - Modules are ike built in libraries
 - `require` is used to *include a module*.
+
+---
+
+### fs
+
+- `fs.appendFile('file.txt','content',function(err){});` appends data
+- `fs.open('file.txt','m',function(err,file){});` open and write the file.
+- `fs.writeFile('file.txt','override-content',function(err){});` overried the existing content
+
+---
+
+` **NPM** has  alot of package!
