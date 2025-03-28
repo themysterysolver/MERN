@@ -1,0 +1,19 @@
+### WEEKLY TOPICS
+- **WEEK-1**:
+  - Basic of HTML
+  - Web dev shortcuts
+- **WEEK-2**:
+  -   css
+  -   selectors
+  -   parent,child,sibling
+  -   position
+  -   css units
+  -   margin and padding
+  -   border and outline
+  -   bootstrap css
+  -   web dev notes
+- **WEEK-3**:
+    - grid system
+    - break points,media query,reposnivness
+    - js,data types
+    - 
