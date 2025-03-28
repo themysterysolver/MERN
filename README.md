@@ -16,4 +16,23 @@
     - grid system
     - break points,media query,reposnivness
     - js,data types
-    - 
+    - js objects
+    - error and handling
+    - callback
+- **WEEK-4**:
+  -  bool val
+  -  splice()
+  -  array and obj
+  -  for loop
+  -  DOM
+  -  .log(),.dir()
+  -  closure
+  -  debugger
+- **WEEK-5**:
+  - React
+  - npm and npx
+  - dev notes
+  - CRA
+  - lock vs normal
+  - npm audit
+  - whaere it starts? 
