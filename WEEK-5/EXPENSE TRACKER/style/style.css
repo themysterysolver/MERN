@@ -1,7 +1,10 @@
-#home_content{
+#home_content,#balance{
     position: fixed;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+#balance h1{
+    font-size: 100px !important;
 }
