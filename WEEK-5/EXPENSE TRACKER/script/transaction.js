@@ -20,10 +20,11 @@ document.addEventListener("DOMContentLoaded",()=>{
         </thead><tbody>`;
 
         JSON.parse(transactions).reverse().forEach(el => {
+            let cell_colour=el.type==="Credit"? "text-success":"text-danger";
             table+=`
                 <tr>
                     <td>${el.date}</td>
-                    <td>${el.type}</td>
+                    <td class="${cell_colour}">${el.type}</td>
                     <td>${el.amount}</td>
                     <td>${el.balance}</td>
                     <td>${el.category}</td>
