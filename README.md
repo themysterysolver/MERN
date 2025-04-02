@@ -28,6 +28,7 @@
   -  .log(),.dir()
   -  closure
   -  debugger
+  - **PROJECT:** `TO DO LIST`
 - **WEEK-5**:
   - React
   - npm and npx
@@ -36,3 +37,4 @@
   - lock vs normal
   - npm audit
   - whaere it starts? 
+  - **PROJECT:** `EXPENSE TRACKER`
