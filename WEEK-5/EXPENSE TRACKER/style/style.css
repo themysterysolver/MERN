@@ -1,4 +1,4 @@
-#home_content,#balance,#credits,#debit{
+#home_content,#balance,#credits,#debit,#stat{
     position: fixed;
     top:50%;
     left:50%;
@@ -30,4 +30,9 @@
     background-color: lightblue !important;
     color: black !important; 
     border-radius: 5px; 
+}
+.red{
+    color: rgb(183, 128, 60);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
 }
