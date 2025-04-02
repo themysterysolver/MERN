@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         }
         localStorage.setItem("balance",new_balance);
 
-        let transaction_hist=JSON.parse(localStorage.getItem("transaction"))||[];
+        let transaction_hist=JSON.parse(localStorage.getItem("transactions"))||[];
         transaction_hist.push(new_transaction);
         localStorage.setItem("transactions",JSON.stringify(transaction_hist));
 
