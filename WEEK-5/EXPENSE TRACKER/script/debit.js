@@ -29,4 +29,22 @@ document.addEventListener("DOMContentLoaded",()=>{
         console.log(JSON.parse(localStorage.getItem("transactions")));
         window.location.href = "balance.html";
     });
+    document.getElementById("add_debit_category").addEventListener("click",()=>{
+        document.getElementById("visbley").style.display="block";
+        document.getElementById("add_debit_category").style.display="none";
+    }); 
+    document.getElementById("debit_category").addEventListener("click",()=>{
+        document.getElementById("visbley").style.display="none";
+        document.getElementById("add_debit_category").style.display="block";
+
+        let newCategory = document.getElementById("input_debit").value.trim();
+
+        if (newCategory){
+            let newOption = document.createElement("option");
+            newOption.textContent = newCategory;
+            newOption.value = newCategory;
+            document.getElementById("debit_drop").appendChild(newOption);
+            document.getElementById("input_debit").value = "";
+        }
+    });
 });
