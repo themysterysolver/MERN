@@ -38,3 +38,29 @@
   - npm audit
   - whaere it starts? 
   - **PROJECT:** `EXPENSE TRACKER`
+- **WEEK-6**:
+  -  React-router-dom
+  -  shift between pages
+  -  ES7
+  -  Hooks
+  -  usestate
+  -  Life cycle of component
+  -  useeffect
+  -  vite and react
+  -  usenavigate
+  -  sync and async
+  -  `client/vite-project` is react app where we all above things is implemented.
+- **WEEK-7**:
+  -  callback
+  -  regex and form validation
+  -  formik and yup
+  -  `client/form-handling` is a react app where all the above things is implemented.
+- **WEEK-8**:
+  -  mock-api
+  -  How to give an intro
+  -  intro to mongo
+  -  vite creation and usage
+  -  sync and async,await
+  -  axios
+  -  crud
+  
