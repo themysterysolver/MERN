@@ -60,20 +60,29 @@ npm create vite @latest
 ```
 npm run dev
 ```
-- overall project structure
+### overall project structure📁
 ```
-my-project/
-├── public/          (static assets like images, not processed)
-├── src/             (your app source code)
-│   ├── assets/      (images, fonts, etc, used inside app)
-│   ├── components/  (your React components)
-│   ├── App.jsx      (main App component)
-│   ├── main.jsx     (entry JS/TS file loaded by index.html)
-│   └── index.css    (global CSS, optional)
-├── index.html       (main HTML file - real entry point)
-├── package.json     (dependencies + scripts)
-├── vite.config.js   (optional Vite configuration)
-└── README.md        (info about your project)
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+├── pages/
+│   ├── Home.jsx
+│   ├── Login.jsx
+│   ├── Signin.jsx
+│   ├── ForgotPassword.jsx
+│   ├── FAQ.jsx
+│   ├── AboutUs.jsx
+│   ├── PrivacyPolicy.jsx
+│   ├── TermsConditions.jsx
+│   ├── Cart.jsx
+│   ├── Orders.jsx
+├── utils/
+│   └── localStorageUtils.js
+├── App.jsx
+├── main.jsx
+└── index.css
+
 ```
 - Actual work flow
 ```
