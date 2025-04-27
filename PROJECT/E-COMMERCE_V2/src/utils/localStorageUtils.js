@@ -33,3 +33,54 @@ export const logoutUser=()=>{
 export const getCurrentUser=()=>{
     return localStorage.getItem('currentUser');
 }
+
+//adding items to cart
+export const addToCart=(product)=>{
+    let users=JSON.parse(localStorage.getItem('users'))||[];
+    let currentUser=getCurrentUser();
+    if(!currentUser)return;
+
+    let user=users.find(u=>u.id===currentUser.id);
+    if(!user)return;
+
+    user.cart.push(product);
+    localStorage.setItem('users',JSON.stringify(users));
+};
+
+//place the order
+export const placeOrder=()=>{
+    let users=JSON.parse(localStorage.getItem('users'))||[];
+    let currentUser=getCurrentUser();
+    if(!currentUser)return;
+
+    let user=users.find(u=>u.id===currentUser.id);
+    if(!user)return;
+
+    user.order.push({
+        orderId:"order_"+Date.now(),
+        items:[...user.cart],
+        totalAmount:user.cart.reduce((sum,item)=>sum+item.price*item*quantity,0),
+        orderDate:new Date().toLocaleDateString()
+    });
+
+    user.cart=[]
+    localStorage.setItem('users',JSON.stringify(users));
+}
+
+export const getCart = () => {
+    let users=JSON.parse(localStorage.getItem('users')) || [];
+    let currentUser=getCurrentUser();
+    if(!currentUser)return [];
+  
+    let user=users.find(u => u.id === currentUser.id);
+    return user?user.cart:[];
+  };
+  
+  export const getOrders=()=>{
+    let users=JSON.parse(localStorage.getItem('users'))||[];
+    let currentUser=getCurrentUser();
+    if (!currentUser)return [];
+  
+    let user=users.find(u => u.id === currentUser.id);
+    return user?user.orders:[];
+  };
