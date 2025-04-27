@@ -44,7 +44,12 @@ export const addToCart=(product)=>{
     let user=users.find(u=>u.id===currentUser.id);
     if(!user)return;
 
-    user.cart.push(product);
+    let existingProduct = user.cart.find(item => item.productId === product.productId);
+    if (existingProduct) {
+        existingProduct.quantity += product.quantity;
+    } else {
+        user.cart.push(product);
+    }
     localStorage.setItem('users',JSON.stringify(users));
     console.log(JSON.parse(localStorage.getItem('users')))
 };
