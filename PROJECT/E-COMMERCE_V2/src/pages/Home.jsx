@@ -1,6 +1,7 @@
 import React from 'react'
 import { addToCart } from '../utils/localStorageUtils';
 import {useEffect,useState} from 'react'
+import Footer from '../components/Footer'
 const Home = () => {
   const [products,setProducts]=useState([]);
 
@@ -9,6 +10,7 @@ const Home = () => {
   },[]);
 
   return (
+    <>
     <div className="container my-4">
       <h2 className="text-center mb-4">Products</h2>
       <div className="row">
@@ -33,6 +35,8 @@ const Home = () => {
         ))}
       </div>
   </div>
+  <Footer/>
+  </>
 );
   
 }

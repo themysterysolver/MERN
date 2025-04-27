@@ -23,9 +23,6 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/orders">Orders</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/faq">FAQ</Link>
-            </li>
           </ul>
           <ul className="navbar-nav">
             {user ? (

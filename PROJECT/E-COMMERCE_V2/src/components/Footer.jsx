@@ -1,11 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Footer = () => {
+function Footer() {
   return (
-    <div>
-      footer
-    </div>
-  )
+    <footer className="bg-light text-center py-3 mt-5">
+      <div className="container">
+        <Link className="text-decoration-none mx-2" to="/aboutus">About Us</Link> | 
+        <Link className="text-decoration-none mx-2" to="/faq">FAQ</Link> | 
+        <Link className="text-decoration-none mx-2" to="/privacypolicy">Privacy Policy</Link> | 
+        <Link className="text-decoration-none mx-2" to="/termscondition">Terms & Conditions</Link>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
