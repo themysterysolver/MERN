@@ -1,4 +1,5 @@
 ### WEEKLY TOPICS
+---
 - **WEEK-1**:
   - Basic of HTML
   - Web dev shortcuts
@@ -63,4 +64,19 @@
   -  sync and async,await
   -  axios
   -  crud
+- **WEEK-9**:
+  - Authentication system using vite *(localstorage)*
+- **WEEK-10**:
+  - MongoDB
+  - Bcakend
+  - Express
+  - Mongoose
+  - Full stack overview
+---
+#### PROJECT
+- `E-COMMERCE_V2` is a simple E-Commerce website that handle sigin,login,carts and orders.
+  - Made for groccery
+  - Implemented via vite and only client side logic is done
+  - localstorage for all logics!
+---
   
