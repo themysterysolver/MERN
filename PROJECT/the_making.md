@@ -51,3 +51,98 @@ A normal shop → but online.
 2. Nav bar and home page📌
 3. Footer
 ---
+### RECAP AND WORKING IN VITE AND REACT
+- This helps in creating vite project
+```
+npm create vite @latest
+```
+- We can run this using
+```
+npm run dev
+```
+- overall project structure
+```
+my-project/
+├── public/          (static assets like images, not processed)
+├── src/             (your app source code)
+│   ├── assets/      (images, fonts, etc, used inside app)
+│   ├── components/  (your React components)
+│   ├── App.jsx      (main App component)
+│   ├── main.jsx     (entry JS/TS file loaded by index.html)
+│   └── index.css    (global CSS, optional)
+├── index.html       (main HTML file - real entry point)
+├── package.json     (dependencies + scripts)
+├── vite.config.js   (optional Vite configuration)
+└── README.md        (info about your project)
+```
+- Actual work flow
+```
+[ index.html ]
+   ↓
+< script src="src/main.jsx" >
+   ↓
+[ main.jsx ] → [ App.jsx ] → [ Components ]
+
+```
+- **component** is a reusable blcok of code,it can be a function looks like a ***tag***
+- `jsx`=>***js XML*** it's like HTML inside js
+- React renders only the necessary part traditional web dev.
+- **rafce** from ES7 to *create content*
+- App.jsx
+```jsx []
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Form from "./pages/Form";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/form" element={<Form />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+```
+- useNavigate
+```
+const nav=useNavigate();
+  let move=()=>{
+    nav('/form');
+  }
+
+```
+- To use ***bootstrap***
+```
+npm install bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+---
+#### THE WORKING
+- To get the dir structure without that node
+> `tree -I "<>"` to fetch tree
+##### FIREBASE
+- [link](https://console.firebase.google.com/)
+  - Add project
+- It is a paltform that provides a ***backend services****
+- No sql db
+- authentication
+- cloud storage and function
+- hosting
+>Firebase = Backend as a Service (BaaS)
+
+- `Project settings → Project Overview → "Web App" → copy config.`
+- Install firebase CLI
+`npm install -g firebase-tools`
+- Deploy to firebase Hosting
+```
+firebase login
+firebase init
+firebase deploy
+```
+---
