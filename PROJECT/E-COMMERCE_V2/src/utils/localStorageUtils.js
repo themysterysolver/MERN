@@ -20,7 +20,7 @@ export const loginUser=(username,password)=>{
     let users=JSON.parse(localStorage.getItem('users'))||[];
     const found=users.find(u=>u.username===username);
     if(!found)return false;
-    loginUser.setItem('currentUser',JSON.parse({id:found.username,username:found.username}));
+    localStorage.setItem('currentUser',JSON.stringify({id:found.username,username:found.username}));
     return true;
 }
 
@@ -31,7 +31,7 @@ export const logoutUser=()=>{
 
 //GET CURR USER
 export const getCurrentUser=()=>{
-    return localStorage.getItem('currentUser');
+    return JSON.parse(localStorage.getItem('currentUser'));
 }
 
 //adding items to cart
@@ -56,10 +56,10 @@ export const placeOrder=()=>{
     let user=users.find(u=>u.id===currentUser.id);
     if(!user)return;
 
-    user.order.push({
+    user.orders.push({
         orderId:"order_"+Date.now(),
         items:[...user.cart],
-        totalAmount:user.cart.reduce((sum,item)=>sum+item.price*item*quantity,0),
+        totalAmount:user.cart.reduce((sum,item)=>sum+item.price*item.quantity,0),
         orderDate:new Date().toLocaleDateString()
     });
 
