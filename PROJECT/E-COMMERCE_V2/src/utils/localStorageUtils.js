@@ -9,9 +9,9 @@ export const registerUser=(username,password,email)=>{
     };
     users.push(newUser);
     localStorage.setItem('users',JSON.stringify(users));
-    localStorage.setItem('currentUser',JSON.stringify({
-        id:newUser.id,username:newUser.username
-    }));
+    // localStorage.setItem('currentUser',JSON.stringify({
+    //     id:newUser.id,username:newUser.username
+    // }));
     return true;
 }
 
@@ -20,6 +20,7 @@ export const loginUser=(username,password)=>{
     let users=JSON.parse(localStorage.getItem('users'))||[];
     const found=users.find(u=>u.username===username);
     if(!found)return false;
+    if(found.password!==password)return false;
     localStorage.setItem('currentUser',JSON.stringify({id:found.username,username:found.username}));
     return true;
 }
