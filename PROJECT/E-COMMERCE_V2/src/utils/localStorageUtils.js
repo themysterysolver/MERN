@@ -21,7 +21,7 @@ export const loginUser=(username,password)=>{
     const found=users.find(u=>u.username===username);
     if(!found)return false;
     if(found.password!==password)return false;
-    localStorage.setItem('currentUser',JSON.stringify({id:found.username,username:found.username}));
+    localStorage.setItem('currentUser',JSON.stringify({id:found.id,username:found.username}));
     return true;
 }
 
@@ -46,6 +46,7 @@ export const addToCart=(product)=>{
 
     user.cart.push(product);
     localStorage.setItem('users',JSON.stringify(users));
+    console.log(JSON.parse(localStorage.getItem('users')))
 };
 
 //place the order

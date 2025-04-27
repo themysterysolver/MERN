@@ -20,7 +20,7 @@ const Login = () => {
   return (
     <>
         <div className="container my-4">
-          <h2 className="text-center mb-4">Signin</h2>
+          <h2 className="text-center mb-4">Login</h2>
           <div className="form-group mb-3">
             <input className="form-control" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
           </div>
