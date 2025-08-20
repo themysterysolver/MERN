@@ -4,16 +4,16 @@ import express from 'express'
 const app = express()
 const PORT = 3000
 
-// set EJS as view engine
-app.set('view engine','ejs')
 
 app.use(express.json());
-
+app.use('/public',express.static('public')) //example.txt // public.example.txt
 
 app.get('/',(req,res)=>{
-    const username = 'Arjun'
-    res.render('index',{username});
+    res.send('Hello Express!')
 })
+
+
+
 
 
 app.listen(PORT,()=>{
