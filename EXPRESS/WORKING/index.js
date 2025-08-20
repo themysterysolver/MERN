@@ -6,13 +6,17 @@ const PORT = 3000
 app.use(express.json());
 
 
-app.use((req,res,next)=>{
+app.use('/welcome',(req,res,next)=>{
     console.log('A new req recieved at'+Date.now());
     next()
 })
 
 app.get('/',(req,res)=>{
     res.send('Hello World! Arjun!');
+}) 
+
+app.get('/welcome',(req,res)=>{
+    res.send('Welcome! Arjun!');
 }) 
 
 
